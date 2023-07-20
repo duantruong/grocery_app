@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manage Products</title>
+    <link rel="stylesheet" href="css/custom.css"/>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+</head>
+<body>
+    <div class="table">
+        <div class="table_header">
+            <p>Manage Products</p>
+            <div>
+               
+                <button class="add_new" data-toggle="modal" data-target="#productModal">Add New Product</button>
+            </div>
+        </div>
+        <div class="table_section">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Unit</th>
+                        <th>Price Per Unit</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    
+                </tbody>
+               
+            </table>
+        </div>
+    </div>
+    
+
+
+    <div class="modal" id="productModal" hidden>
+        <div class="modal-header">
+            <h4 class="modal-title">
+                Add New Product
+            </h4>
+        </div>
+        <div class="modal-body">
+            <form class="name-form">
+                <label>
+                    Name
+                </label>
+                <input id="name" type="text" placeholder="Name">
+            </form>
+            <form id="unit-form">
+                <label>
+                    Unit
+                </label>
+                <select class="uoms" name="uoms" id="uoms">
+                   
+                </select>
+            </form>
+            <form class="price-form">
+                <label>
+                    Price Per Unit
+                </label>
+                <input id="price" type="text" placeholder="Price">
+            </form>
+            <div class="button-container">
+                <button class="close-button" data-toggle="modal">
+                    Close
+                </button>
+                <button id="save-button">
+                    Save
+                </button>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="js/manage-product.js"></script>
+
+<script src="js/common.js"></script>
+</html>
